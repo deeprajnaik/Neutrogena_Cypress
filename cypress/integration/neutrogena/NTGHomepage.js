@@ -37,8 +37,9 @@ class Homepage {
         cy.get('[data-listid="list-haircare"]>.nav-topcat-link').click()
         cy.title().should('eq', 'Shampoo, Conditioner, Hair Care Products | NEUTROGENA®')
 
-        cy.get('[data-listid="list-our-promise"]>.nav-topcat-link').click()
-        cy.title().should('eq', 'Our Commitment to Sustainability & The Planet | NEUTROGENA®')
+        //section was removed
+        //cy.get('[data-listid="list-our-promise"]>.nav-topcat-link').click()
+        //cy.title().should('eq', 'Our Commitment to Sustainability & The Planet | NEUTROGENA®')
         
         cy.get('[data-listid="list-skin360"]>.nav-topcat-link').click()
         cy.title().should('eq', 'Neutrogena Skin360™ Web App')
