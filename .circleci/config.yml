@@ -5,6 +5,4 @@ orbs:
 workflows:
   build:
     jobs:
-      - cypress/run:
-          command: npx cypress run --spec "neutrogena/neutrogena.spec.js"
-      
+      - cypress/run:   
