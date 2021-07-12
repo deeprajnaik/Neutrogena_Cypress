@@ -6,5 +6,5 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          command: npx run runtests
+          command: npx cypress run --spec "cypress/integration/neutrogena.spec.js"
       
