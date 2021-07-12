@@ -5,5 +5,6 @@ orbs:
 workflows:
   build:
     jobs:
-      - cypress/run
+      - cypress/run:
+          command: npx run runtests
       
