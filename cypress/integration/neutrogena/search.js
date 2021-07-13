@@ -5,15 +5,15 @@ class search
 visit()
 {
 	cy.visit("https://www.neutrogena.com")
-	cy.wait(20000)
+	//cy.wait(20000)
 }
 
- closeOverlay() {
+ /*closeOverlay() {
         
        cy.get('#yie-close-button-5f0efd87-bef8-5eee-b662-e569616a57a7').click()
        //cy.get('#yie-close-button-a2642441-2501-5ab9-bdd5-385352be503f').click()
         
-    }
+    }*/
 
 // Verify the page title
  verifyPageTitle() {
@@ -70,12 +70,13 @@ refineDropdown()
 	.wait(4000)
 
     //select "Featured As" checkbox  
-	cy.get('#primary div:nth-child(6) > div > ul > li > a').click({ force: true })
+	cy.get('#primary div:nth-child(6) > div > ul > li:nth-child(1) > a').click({ force: true })
+
     //cy.contains('New').should('have.class', 'breadcrumb-refinement-value')
 
     //click on "show results" CTA
     cy.get('#primary div.show-results > a').click({ force: true })
-    cy.contains('We found 4 products for SHAMPOO.').should('have.class', 'search-result-msg')
+    cy.contains('We found 1 products for SHAMPOO.').should('have.class', 'search-result-msg')
     .wait(4000)
 
     //click on "refine" dropdown

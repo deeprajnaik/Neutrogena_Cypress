@@ -116,7 +116,7 @@ fillShippingForm()
         cy.get('#dwfrm_singleshipping_shippingAddress_addressFields_lastName').type('Testing', { delay: 100 })
         
         //enter address 
-        cy.get('#dwfrm_singleshipping_shippingAddress_addressFields_address1').type('4286  McDonald Avenue', { delay: 100 })
+        cy.get('#dwfrm_singleshipping_shippingAddress_addressFields_address1').type('4286  McDonald Avenue')
         Cypress.on('uncaught:exception', (err, runnable) => {
           // returning false here prevents Cypress from
           // failing the test
@@ -124,7 +124,7 @@ fillShippingForm()
          })
 
         //enter city 
-        cy.get('#dwfrm_singleshipping_shippingAddress_addressFields_city').type('MILLHOUSEN', { delay: 100 })
+        cy.get('#dwfrm_singleshipping_shippingAddress_addressFields_city').type('millhousen', { delay: 100 })
 
         //enter state
         cy.get('#dwfrm_singleshipping_shippingAddress_addressFields_states_state').select('New York', { delay: 100 })
@@ -186,17 +186,17 @@ paymentMethod()
         //enter "security number" 
         //cy.get('#dwfrm_billing_paymentMethods_creditCard_cvn').clear().type(this.data.cvv)
 
-        cy.get('#dwfrm_billing div.form-row.form-row-button > button[type="submit"] > span').click({force:true})
-        .wait(5000)
-        
-
+        cy.get('#dwfrm_billing > div.form-row.form-row-button > button').click({force:true})
+        .wait(10000)
         
 }
+
+
 placeOrder()
 {
   // Click on "place order" CTA
-    cy.get('#primary div.opc-step.opc-step3.enabled > div > form > fieldset > div > button[type="submit"]').click({force:true})
-    .wait(3000)
+  cy.get('#secondary > div.form-row.right-po-btn > button').click({force:true})
+    
 
    //cy.contains('Thank you for your order').should('have.class', 'clearfix primary-focus')
 }

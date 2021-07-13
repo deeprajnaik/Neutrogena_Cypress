@@ -12,14 +12,14 @@ class NCart {
         cy.title().should('eq','Facial Cleansers & Skin Toners | Neutrogena®')
     }
 
-    closeOverlay() {
+    /*closeOverlay() {
        //close the overlay   
        cy.wait(10000)
        cy.get('#yie-close-button-5f0efd87-bef8-5eee-b662-e569616a57a7').click()
        //cy.get('#yie-close-button-a2642441-2501-5ab9-bdd5-385352be503f').click()
        //cy.get('#yie-close-button-4d886615-9976-591f-b671-062c4498026f').click()
        
-    }
+    }*/
 
     addProductToCart() {
         cy.get('.product-tile[data-itemid="6811125"] > .product-detail .tile-buttons .add-to-cart').click()
