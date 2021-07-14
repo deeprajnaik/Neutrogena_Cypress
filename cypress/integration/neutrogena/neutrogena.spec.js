@@ -13,15 +13,15 @@ import CheckoutLogin from  '../neutrogena/CheckoutProduct-(login_user)'
 describe('Neutrogena', function () {
 
  
-  //const signIn = new GLogin()
-  const register = new Register()
-  const lp = new Login()
-   const homepage = new Homepage()
-  const pg = new Product()
-  const scart = new cart()
-  const se = new search()
- const check = new CheckoutGuest()
-  const checklogin = new CheckoutLogin()
+  
+    const register = new Register()
+    const lp = new Login()
+    const homepage = new Homepage()
+    const pg = new Product()
+    const scart = new cart()
+    const se = new search()
+    const check = new CheckoutGuest()
+    const checklogin = new CheckoutLogin()
  
 
 
@@ -118,7 +118,7 @@ it('login', function (){
     pg.chooseReview()
     pg.bottomToTop()
 
-  })
+  }) 
   
 
   it('cart ', function (){
@@ -126,7 +126,7 @@ it('login', function (){
     //Verify cart features
     scart.visit()
     scart.verifyPageTitle()
-    scart.closeOverlay()
+    //scart.closeOverlay()
     scart.addProductToCart()
     scart.navigateToCart()
     scart.verifyPricePresent()
@@ -148,17 +148,17 @@ it('login', function (){
 
 it('search', function (){
     
-    const se=new search()
+    
 
     se.visit()
-    se.closeOverlay()
+    //se.closeOverlay()
     se.verifyPageTitle()
     se.inValidSearch()
    // se.VerifyPopup()
     se.verifySearch()
     se.refineDropdown()
     se.bestSellingDropdown()
-})
+}) 
 
 
 it('CheckoutGuest', function (){
@@ -183,7 +183,6 @@ it('CheckoutGuest', function (){
     cy.get('#dwfrm_billing_paymentMethods_creditCard_cvn').clear().type(this.data.cvv)
     check.paymentMethod()
     check.placeOrder()
-
   
     })
 

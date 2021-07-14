@@ -88,13 +88,13 @@ descriptionTab()
 {
 //click on "Ingredients" tab
   cy.get('#pdpMain div.tab.pdpIngredients > button').click({force: true})
-  cy.contains('Ingredients').should('have.class', 'tab-label')
-  .wait(3000)
+  //cy.contains('Ingredients').should('have.class', 'tab-label')
+  .wait(2000)
 
 //click on "How To Use" tab
   cy.get('.pdpHowToUse').click({force: true})
-  cy.contains('How To Use').should('have.class', 'tab-label')
-  .wait(3000)
+  //cy.contains('How To Use').should('have.class', 'tab-label')
+  .wait(2000)
 }
 
 

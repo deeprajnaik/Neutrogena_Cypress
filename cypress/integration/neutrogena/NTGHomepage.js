@@ -37,7 +37,6 @@ class Homepage {
         cy.get('[data-listid="list-haircare"]>.nav-topcat-link').click()
         cy.title().should('eq', 'Shampoo, Conditioner, Hair Care Products | NEUTROGENA®')
 
-        //section was removed
         //cy.get('[data-listid="list-our-promise"]>.nav-topcat-link').click()
         //cy.title().should('eq', 'Our Commitment to Sustainability & The Planet | NEUTROGENA®')
         
@@ -52,11 +51,11 @@ class Homepage {
             cy.wait(7000)
         })
     }
-    verifyBanner() {
+    /*verifyBanner() {
         cy.get('#main div:nth-child(2) > div > a > picture > img')
         cy.wait(1000)
 
-    }
+    }*/
     /*verifyCarousels() {
         //cy.wait(2000)
         //cy.get('#carousel-tab-1').click()
