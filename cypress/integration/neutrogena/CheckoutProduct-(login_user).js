@@ -145,7 +145,7 @@ cy.get('#dwfrm_singleshipping_shippingAddress button[type="submit"]').click()
 cy.wait(3000)
 //cy.contains('Sorry, we could not find a match for your address.').should('have.class', 'header_prompt')
 cy.contains('Use Original').click();
-cy.get('#dwfrm_addForm').invoke('show').click({force:true})
+//cy.get('#dwfrm_addForm').invoke('show').click({force:true})
 cy.wait(5000)
 cy.url().should('include','Billing')
 }
