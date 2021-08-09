@@ -3,7 +3,7 @@ class NRegister {
     visit() {
         cy.visit("https://www.neutrogena.com/login?original=%2Faccount")
         //cy.visit("https://www.neutrogena.com/register")
-        cy.get('#dwfrm_login_register > fieldset > .form-row > button').click()
+        cy.get('#dwfrm_login_register > fieldset > .form-row > button').click({force: true})
 
 
     }
@@ -21,7 +21,7 @@ class NRegister {
     validationMessageEmptyFields() {
         //click submit CTA leaving mendatory fields blank
         //click submit button
-        cy.get('#RegistrationForm > fieldset > div.form-row.form-row-button > button').click()
+        cy.get('#RegistrationForm > fieldset > div.form-row.form-row-button > button').click({force: true})
         //checking if error class is present
         cy.contains('This field is required.').should('have.class', 'error')
 
@@ -43,7 +43,7 @@ class NRegister {
         //check checkbox blank
         cy.get('.field-wrapper > label').click({ force: true })
         //click submit button blank
-        cy.get('#RegistrationForm > fieldset > div.form-row.form-row-button > button').click()
+        cy.get('#RegistrationForm > fieldset > div.form-row.form-row-button > button').click({force: true})
         cy.contains('This field is required.').should('have.class', 'error')
     }
 
@@ -77,7 +77,7 @@ class NRegister {
         //check checkbox
         cy.get('.field-wrapper > label').click({ force: true })
         //click submit button
-        cy.get('#RegistrationForm > fieldset > div.form-row.form-row-button > button').click()
+        cy.get('#RegistrationForm > fieldset > div.form-row.form-row-button > button').click({force: true})
     }
 
     fillRegistrationForm() {
@@ -102,7 +102,7 @@ class NRegister {
         //check checkbox
         cy.get('.field-wrapper > label').click({ force: true })
         //click submit button
-        cy.get('#RegistrationForm > fieldset > div.form-row.form-row-button > button').click()
+        cy.get('#RegistrationForm > fieldset > div.form-row.form-row-button > button').click({force: true})
 
 
     }
