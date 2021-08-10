@@ -6,8 +6,12 @@ workflows:
   build:
     jobs:
       - cypress/run
-nightly:
     triggers:
       - schedule:
           cron: "0 0 * * MON"
+          filters:
+            branches:
+              only:
+                - master
+                - beta
 
