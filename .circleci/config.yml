@@ -7,8 +7,4 @@ workflows:
     jobs:
       - cypress/run
 
-schedule-workflow:
-  triggers:
-     - schedule:
-         cron: "0 0 * * MON"
 
