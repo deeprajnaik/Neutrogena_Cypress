@@ -6,6 +6,7 @@ workflows:
   build:
     jobs:
       - cypress/run
-triggers:
-      - schedule:
-          cron: "0 0 * * MON"
+schedule-workflow:
+  triggers:
+     - schedule:
+         cron: "0 0 * * MON"
