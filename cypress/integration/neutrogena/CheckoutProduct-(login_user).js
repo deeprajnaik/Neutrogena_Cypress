@@ -156,7 +156,7 @@ cy.url().should('include','Billing')
         cy.get('#dwfrm_billing_paymentMethods_creditCard_owner').type(' ')
 
         //enter "card number" field blank
-        cy.get('#dwfrm_billing div.cc-wrapper > div.form-row.required > label > span:nth-child(1)').type(' '{force:true})
+        cy.get('#dwfrm_billing div.cc-wrapper > div.form-row.required > label > span:nth-child(1)').type(' ',{force:true})
 
         //enter "security number" field blank
         cy.get('#dwfrm_billing_paymentMethods_creditCard_cvn').type(' ')
