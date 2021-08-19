@@ -41,7 +41,7 @@ class Homepage {
         //cy.title().should('eq', 'Our Commitment to Sustainability & The Planet | NEUTROGENA®')
         
         cy.get('[data-listid="list-skin360"]>.nav-topcat-link').click()
-        cy.title().should('eq', 'Neutrogena Skin360™ Web App')
+        cy.title().should('eq', 'Neutrogena Skin360® Web App')
         cy.go("back")
         //cy.get('[href="https://www.neutrogena.com/the-bar.html"]>img').click()
         //cy.title().should('eq', 'The Bar: Skincare Tips, Tricks & Products | NEUTROGENA®')
