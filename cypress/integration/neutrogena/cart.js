@@ -137,7 +137,7 @@ class NCart {
 
     verifyPricePresent() {
         //price = cy.get('.item-price .price-sales').text()
-        cy.get('.item-price .price-sales').contains('$')
+        cy.get('.price-unadjusted-special').contains('$')
     }
 
     addMultipleProductToCart() {
@@ -155,7 +155,7 @@ class NCart {
     */
 
     verifyPriceAndSubtotal() {
-        cy.get('.item-price .price-sales').then(($price1) => {
+        cy.get('.price-unadjusted-special').then(($price1) => {
             const a = $price1.text()
             cy.log(a)
             cy.get('.order-subtotal > td:nth-child(2)').should(($price2) => {
